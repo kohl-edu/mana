@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Entrar — Um Tempo com Deus</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="bg-thorns"></div>
+
+<main class="login-page">
+
+  <div class="login-card glass">
+
+    <a class="brand login-brand" href="index.html">
+      <span>✦</span> Um Tempo com Deus
+    </a>
+
+    <p class="eyebrow">SEU ESPAÇO PESSOAL</p>
+
+    <h1>Bem-vindo de volta.</h1>
+
+    <p class="login-intro">
+      Entre para manter seus registros organizados neste dispositivo.
+    </p>
+
+    <form id="loginForm">
+
+      <label>
+        Seu nome
+        <input id="loginName" required placeholder="Como podemos chamar você?">
+      </label>
+
+      <label>
+        E-mail
+        <input id="loginEmail" type="email" required placeholder="voce@email.com">
+      </label>
+
+      <label>
+        Senha
+        <input id="loginPassword" type="password" minlength="4" required placeholder="Mínimo de 4 caracteres">
+      </label>
+
+      <button class="btn btn-primary full" type="submit">
+        Entrar no meu espaço
+      </button>
+
+    </form>
+
+    <p class="small-note">
+      Protótipo sem servidor: os dados deste exemplo são armazenados no navegador usando localStorage.
+    </p>
+
+    <a class="back-link" href="index.html">
+      ← Voltar para o início
+    </a>
+
+  </div>
+
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+</html>
