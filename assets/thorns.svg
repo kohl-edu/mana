@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs>
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="2"/>
+  </filter>
+</defs>
+
+<g
+  fill="none"
+  stroke="#65776c"
+  stroke-width="5"
+  stroke-linecap="round"
+  opacity=".14"
+  filter="url(#blur)"
+>
+
+  <path d="M-100 180 C240 20 380 340 650 180 S1160 50 1740 260"/>
+
+  <path d="M-80 820 C250 650 400 940 690 760 S1180 620 1720 830"/>
+
+  <path d="M120 180 l-38 -35 M220 130 l18 -46 M335 160 l-10 48 M470 225 l-45 5 M620 200 l25 -45 M760 145 l-8 50 M930 170 l-40 8 M1100 140 l18 46 M1260 175 l-8 50 M1430 225 l-42 3"/>
+
+  <path d="M80 790 l-25 -42 M250 735 l18 45 M410 820 l-40 4 M570 800 l15 -47 M760 750 l-10 50 M930 790 l-42 3 M1100 720 l20 45 M1280 760 l-9 50 M1460 800 l-40 4"/>
+
+</g>
+</svg>
