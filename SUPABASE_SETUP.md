@@ -41,7 +41,7 @@ pelos valores do seu projeto.
 No Supabase, em Authentication > URL Configuration:
 
 Site URL:
-https://kohl-edu.github.io
+https://kohl-edu.github.io/mana/
 
 Adicione como Redirect URL:
 https://kohl-edu.github.io/mana/progresso.html
