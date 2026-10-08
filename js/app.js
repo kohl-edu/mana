@@ -21,6 +21,12 @@ function getDB(){
 
 function setDB(db){
   localStorage.setItem(DB_KEY,JSON.stringify(db));
+
+  if(window.UTCDCloud?.persist){
+    Promise.resolve(window.UTCDReady)
+      .then(()=>window.UTCDCloud.persist(db))
+      .catch(err=>console.error("Sincronização:",err));
+  }
 }
 
 function toast(msg){
@@ -42,6 +48,7 @@ function today(){
 function addActivity(text,icon="✦"){
   const db=getDB();
   db.activities.unshift({
+    id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),
     text,
     icon,
     date:new Date().toISOString()
