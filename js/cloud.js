@@ -86,7 +86,9 @@ const UTCDCloud = (() => {
   }
 
   async function loadRemoteAndMerge(user) {
-    const local = withIds(rawGetDB());
+    const rawLocal = withIds(rawGetDB());
+    const sameLocalUser = Boolean(rawLocal.user?.email && user.email && rawLocal.user.email.toLowerCase() === user.email.toLowerCase());
+    const local = sameLocalUser ? rawLocal : { ...emptyDB(), user: rawLocal.user };
 
     const { data: profile, error: profileError } = await client
       .from("profiles")
