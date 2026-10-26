@@ -1,9 +1,9 @@
 /*
  * Configuração pública do Supabase.
- * IMPORTANTE: use somente a PUBLISHABLE KEY (ou a antiga anon key).
- * NUNCA coloque uma secret/service_role key neste arquivo.
+ * Use somente a Publishable Key neste arquivo.
+ * Nunca coloque uma Secret/Service Role Key no frontend.
  */
 window.UTCD_CONFIG = {
-  supabaseUrl: "YOUR_SUPABASE_URL",
-  supabasePublishableKey: "YOUR_SUPABASE_PUBLISHABLE_KEY"
+  supabaseUrl: "https://jhxdysnmponpaywuvynp.supabase.co",
+  supabasePublishableKey: "sb_publishable__Ns24LOshWAxd-u8Qs7h3Q_eMvyRwIC"
 };
