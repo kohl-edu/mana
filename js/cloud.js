@@ -164,6 +164,21 @@ const UTCDCloud = (() => {
     return data;
   }
 
+  async function sendPasswordReset(email) {
+    if (!configured()) throw new Error("O armazenamento online ainda não foi configurado.");
+    const redirectTo = new URL("recuperar.html", window.location.href).href;
+    const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo });
+    if (error) throw error;
+  }
+
+  async function updatePassword(password) {
+    if (!configured()) throw new Error("O armazenamento online ainda não foi configurado.");
+    const { data, error } = await client.auth.updateUser({ password });
+    if (error) throw error;
+    currentSession = (await client.auth.getSession()).data.session;
+    return data.user;
+  }
+
   async function signOut() {
     if (client) {
       const { error } = await client.auth.signOut();
@@ -185,7 +200,7 @@ const UTCDCloud = (() => {
   function isSignedIn() { return Boolean(currentSession?.user); }
   function getUser() { return currentSession?.user || null; }
 
-  return { ready, init, signIn, signUp, signOut, persist, isConfigured, isSignedIn, getUser };
+  return { ready, init, signIn, signUp, sendPasswordReset, updatePassword, signOut, persist, isConfigured, isSignedIn, getUser };
 })();
 
 window.UTCDCloud = UTCDCloud;
